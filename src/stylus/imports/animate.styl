@@ -1,0 +1,22 @@
+@keyframes scrollLoop
+    0%
+        transform scale(1,0)
+        transform-origin top
+    40%
+        transform scale(1,1)
+        transform-origin top
+    41%
+        transform-origin bottom
+        transform scale(1,1)
+    81%
+        transform scale(1,0)
+        transform-origin bottom
+    82%
+        transform-origin top
+        transform scale(1,0)
+
+.animate.scrollLoop
+    animation-duration 2s
+    animation-iteration-count infinite
+    animation-name scrollLoop
+    animation-timing-function cubic-bezier(0.770, 0.000, 0.175, 1.000)

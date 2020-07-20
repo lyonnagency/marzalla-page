@@ -1,0 +1,44 @@
+﻿/* TEAM */
+
+	Web designer: Ariel León Pérez
+	Facebook: https://www.facebook.com/arieleonp
+	From: Morelia, Michoacán, México
+
+	Web designer: Abraham Sanguino Domínguez
+	Facebook: https://www.facebook.com/haamsaan
+	From: Morelia, Michoacán, México
+	
+	UI developer: Alberto Alvarez Zamudio
+	Facebook: https://www.facebook.com/wolfir.silver
+	From: Morelia, Michoacán, México
+
+	Frontend: Nikita Pashkov
+	Facebook: https://www.facebook.com/the.nickytron?ref=br_rs
+	From: Morelia, Michoacán, México
+	
+	Frontend: Hugo Hernández Valdez
+	Facebook: https://www.facebook.com/GouuH
+	From: Morelia, Michoacán, México
+
+	Deployment: Diego Armando Pedraza Zepeda
+	Facebook: https://www.facebook.com/Diego.Pedraza.13
+	From: Morelia, Michoacán, México
+
+	SEO: Diego Armando Pedraza Zepeda
+	Facebook: https://www.facebook.com/Diego.Pedraza.13
+	From: Morelia, Michoacán, México
+
+	Quality assurance: Ana Cristina Suazo Hernández
+	Facebook: https://www.facebook.com/chas.cold
+	From: Morelia, Michoacán, México
+
+	SEM: Oscar Garduño Gutiérrez
+	Facebook: https://www.facebook.com/oscar.g.garduno.9
+	From: Morelia, Michoacán, México
+
+/* SITE */
+	Last update:2018/03/24
+	Language: Spanish
+	Doctype:HTML5
+	IDE: Visual Studio Code, Ilustrator, Photoshop
+	Site URL: http://marzallaeventos.com/

@@ -1,0 +1,416 @@
+@import '../../node_modules/nib/index.styl'
+@import 'imports/mixins'
+
+@media screen and (max-width: 1600px)
+  section
+    &.events
+      figure.event
+        height 696px
+        .rhomb
+          bottom -400px
+          left -400px
+          width 800px
+          height 800px
+
+@media screen and (max-width: 1440px)
+  section
+    &.events
+      figure.event
+        height 652px
+        .rhomb
+          bottom -400px
+          left -400px
+          width 800px
+          height 800px
+
+@media screen and (max-width: 1280px)
+  .column
+    wrapper()
+
+  header
+    &.main-header
+      &.home
+        .content-background
+          &.bg-1
+            background-image url('/static/img/home/laptop_background_header_1.jpg')
+          &.bg-2
+            background-image url('/static/img/home/laptop_background_header_2.jpg')
+          &.bg-3
+            background-image url('/static/img/home/laptop_background_header_3.jpg')
+      &.social
+        .content-background
+          background-image url('/static/img/social/laptop_background_header.jpg')
+      &.corporate
+        .content-background
+          background-image url('/static/img/corporate/laptop_background_header.jpg')
+      &.reserve
+        .content-background
+          background-image url('/static/img/reserve/laptop_background_header.jpg')
+      &.serices
+        .content-background
+          background-image url('/static/img/services/laptop_background_header.jpg')
+  section
+    &.events
+      figure.event
+        height 558px
+        .rhomb
+          bottom -350px
+          left -350px
+          width 700px
+          height 700px
+
+@media screen and (max-width: 1024px)
+  header
+    &.main-header
+      &.home
+        .content-background
+          &.bg-1
+            background-image url('/static/img/home/tablet_landscape_background_header_1.jpg')
+          &.bg-2
+            background-image url('/static/img/home/tablet_landscape_background_header_2.jpg')
+          &.bg-3
+            background-image url('/static/img/home/tablet_landscape_background_header_3.jpg')
+      &.social
+        .content-background
+          background-image url('/static/img/social/tablet_landscape_background_header.jpg')
+      &.corporate
+        .content-background
+          background-image url('/static/img/corporate/tablet_landscape_background_header.jpg')
+      &.reserve
+        .content-background
+          background-image url('/static/img/reserve/tablet_landscape_background_header.jpg')
+      &.serices
+        .content-background
+          background-image url('/static/img/services/tablet_landscape_background_header.jpg')
+  section
+    &.objective
+      .rhomb
+        &.background
+          transform translateX(-30%) rotate(45deg)
+        &.pattern
+          transform translate(20%, -50%) rotate(45deg)
+    &.events
+      figure.event
+        height 482px
+        .rhomb
+          bottom -300px
+          left -300px
+          width 600px
+          height 600px
+        figcaption
+          margin 0 25px 25px 25px
+          h3
+            margin 0 0 25px 0
+
+@media screen and (max-width: 768px)
+  .full-screen
+    width 100vw
+    height auto
+    min-height auto
+
+  nav.main-nav ul li.link a
+    width 120px
+  header
+    &.main-header
+      .rhomb
+        width 100vh
+        height 100vh
+        top 0
+        left 0
+        transform translate(-50%, 25%) rotate(45deg)
+      &.home
+        .content-background
+          &.bg-1
+            background-image url('/static/img/home/tablet_portrait_background_header_1.jpg')
+          &.bg-2
+            background-image url('/static/img/home/tablet_portrait_background_header_2.jpg')
+          &.bg-3
+            background-image url('/static/img/home/tablet_portrait_background_header_3.jpg')
+      &.social
+        .content-background
+          background-image url('/static/img/social/tablet_portrait_background_header.jpg')
+      &.corporate
+        .content-background
+          background-image url('/static/img/corporate/tablet_portrait_background_header.jpg')
+      &.reserve
+        .content-background
+          background-image url('/static/img/reserve/tablet_portrait_background_header.jpg')
+      &.serices
+        .content-background
+          background-image url('/static/img/services/tablet_portrait_background_header.jpg')
+  section
+    &.areas
+      padding 150px 0
+      .column
+        flex_content(false)
+      .wedding
+      .corporate
+        width 100%
+        margin 0
+        > div
+          height auto
+      .wedding
+        margin 0 0 200px 0
+        .rhombus .rhomb
+          transform translate(-25%, -50%) rotate(45deg)
+      .corporate .rhombus .rhomb
+        transform translate(25%, -50%) rotate(45deg)
+    &.objective
+      .column
+        flex_content(false)
+        > div
+          width 100%
+          text-align center
+          flex_content()
+          align-items center
+          &:first-child
+            margin 100px 0 150px 0
+      .rhomb
+        &.background
+          transform rotate(45deg)
+        &.pattern
+          position absolute
+          top 100%
+          left 50%
+          transform translate(-50%, -75%) rotate(45deg)
+    &.memories
+      .column
+        > div
+          flex_content(false)
+        .memory
+          width 100%
+          margin-bottom 50px
+          &:last-child
+            margin-bottom 0
+    &.events
+      figure.event
+        height 579px
+        .rhomb
+          bottom -350px
+          left -350px
+          width 700px
+          height 700px
+    &.call-to-action
+      flex_content(false)
+      justify-content center
+      align-items center
+      padding 200px 0
+      p
+        width 100%
+    &.call-to-services
+      flex_content(false)
+      justify-content center
+      align-items center
+      padding 100px 0
+      p
+        width 100%
+      .grid
+        width 100%
+        height 100%
+        grid-auto-rows calc((100% / 30) - 10px)
+        grid-auto-columns calc((100% / 30) - 10px)
+        .grid-item:nth-child(13)
+          grid-area 22 / 23 / 27 / 26
+    &.about
+      .description
+        width 100%
+        margin 0
+    &.services
+      .grid
+        &.service-1 .item-image
+          background-image url('/static/img/services/covers/tablet_portrait_background_atmosphere.jpg')
+        &.service-3 .item-image
+          background-image url('/static/img/services/covers/tablet_portrait_background_venues.jpg')
+        &.service-4 .item-image
+          background-image url('/static/img/services/covers/tablet_portrait_background_rents.jpg')
+
+@media screen and (max-width: 414px)
+  .rhomb
+    width 80vw
+    height 80vw
+
+  .mobile-menu
+    display block
+  nav.main-nav ul li.link
+    display none
+  header
+    &.main-header
+      hgroup
+        h1
+          font-size 14px
+        h2
+          font-size 78px
+          line-height 88px
+      &.home
+        .content-background
+          &.bg-1
+            background-image url('/static/img/home/smartphone_portrait_background_header_1.jpg')
+          &.bg-2
+            background-image url('/static/img/home/smartphone_portrait_background_header_2.jpg')
+          &.bg-3
+            background-image url('/static/img/home/smartphone_portrait_background_header_3.jpg')
+      &.social
+        .content-background
+          background-image url('/static/img/social/smartphone_portrait_background_header.jpg')
+      &.corporate
+        .content-background
+          background-image url('/static/img/corporate/smartphone_portrait_background_header.jpg')
+      &.reserve
+        .content-background
+          background-image url('/static/img/reserve/smartphone_portrait_background_header.jpg')
+      &.serices
+        .content-background
+          background-image url('/static/img/services/smartphone_portrait_background_header.jpg')
+
+  section
+    .title
+      line-height 50px
+    &.areas
+      padding 100px 0 50px 0
+      overflow hidden
+      .wedding
+      .corporate
+        .rhombus
+          position relative
+          margin-bottom 100px
+          .rhomb
+            position relative
+            left auto
+            top auto
+            transform translate(0, 0) rotate(45deg) !important
+            margin 0 auto
+        .information
+          align-items center
+          text-align center
+          h1
+            font-size 78px
+          p
+            width 100%
+      .wedding
+        margin 0 0 150px 0
+    &.objective
+      overflow hidden
+      .column > div:first-child
+        margin 100px 0 100px 0
+      .rhomb.pattern
+        width 60vw
+        height 60vw
+    &.call-to-services
+      padding 50px 0
+      overflow hidden
+      .grid
+        width calc(160% - 6em)
+        grid-auto-columns calc((calc(160% - 6em) / 30) - 10px)
+    &.memories
+      .memory .photo
+        flex 0 0 100px
+    &.events
+      overflow hidden
+      figure.event
+        height 572px
+    &.call-to-action
+      padding 150px 0 200px 0
+    &.contact
+      .column > div
+        width 100%
+      address
+        margin-right 0
+        width 100%
+    &.services
+      .grid
+        display block
+        height auto
+        .grid-item
+          &.item-image
+            height 250px
+          &.item-title
+          &.item-information
+            box-shadow none
+            padding 50px 0
+        &.service-1 .item-image
+          background-image url('/static/img/services/covers/smartphone_portrait_background_atmosphere.jpg')
+        &.service-2 .item-image
+          background-image url('/static/img/services/covers/smartphone_portrait_background_aliments.jpg')
+        &.service-3 .item-image
+          background-image url('/static/img/services/covers/smartphone_portrait_background_venues.jpg')
+        &.service-4 .item-image
+          background-image url('/static/img/services/covers/smartphone_portrait_background_rents.jpg')
+
+  footer
+    ul.social-network
+      > li:first-child
+        margin-right 0
+        margin-left 20px
+      a
+        text-align right
+    .copyright ul
+      justify-content center
+      > li:last-child
+        display none
+        
+@media screen and (max-width: 375px)
+  section
+    &.events
+      figure.event
+        height 512px
+        .rhomb
+          bottom -300px
+          left -300px
+          width 600px
+          height 600px
+
+@media screen and (max-width: 360px)
+  header
+    &.main-header
+      hgroup
+        h2
+          font-size 70px
+
+  section
+    &.areas
+      .wedding
+      .corporate
+        .information
+          h1
+            font-size 70px
+    &.memories
+      .memory
+        .info ul
+          flex_content(false)
+          justify-content flex-start
+          h3
+            margin-bottom 10px
+    &.events
+      figure.event
+        height 484px
+
+@media screen and (max-width: 320px)
+  header
+    &.main-header
+      hgroup
+        h2
+          font-size 60px
+
+  section
+    &.areas
+      .wedding
+      .corporate
+        .information
+          h1
+            font-size 60px
+    &.events
+      figure.event
+        height 420px
+        .rhomb
+          bottom -275px
+          left -275px
+          width 550px
+          height 550px
+
+  footer
+    .isotipo img
+      height 82px
+    ul
+      &.social-network
+        a
+          width 40px

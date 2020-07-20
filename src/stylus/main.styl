@@ -1,0 +1,1325 @@
+@import 'imports/normalize'
+
+@import 'imports/mixins'
+@import 'imports/classes'
+@import 'imports/fonts'
+@import 'imports/icons'
+@import 'imports/animate'
+
+$color_solid_white = #ffffff
+$color_solid_yellow = #ffb546
+$color_solid_green = #65cbc9
+$color_solid_deep_green = #007473
+$color_solid_blue = #212844
+
+@import 'imports/no_touch'
+
+figure
+ul
+ol
+fieldset
+  margin 0
+  padding 0
+
+ul
+ol
+  list-style none
+
+fieldset
+  border none
+
+address
+  font-style normal
+
+a
+input
+select
+button
+  outline none
+  appearance none
+  &:hover
+  &:focus
+    outline none
+
+a
+  text-decoration none
+
+input
+textarea
+  border 0
+  padding 0
+  &:invalid
+  &:focus
+    box-shadow none
+    outline none
+
+input:-webkit-autofill
+input:-webkit-autofill:hover
+input:-webkit-autofill:focus
+input:-webkit-autofill:active
+  transition background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s
+
+html
+body
+  width 100%
+
+.overflow-hidden
+  overflow hidden
+
+body
+  background-color $color_solid_white
+  font-family 'ProximaNova', sans-serif
+  font-weight 200
+  text-rendering geometricPrecision
+  overflow-x hidden
+  transition background-color .5s
+  &.no-scroll
+    @extend .overflow-hidden
+
+#app
+  position relative
+  width 100%
+
+.container
+main
+  position relative
+
+// Animation in the page change
+body
+  overflow-x hidden !important
+
+.page-transition-forward-enter-active
+.page-transition-forward-leave-active
+.page-transition-backward-enter-active
+.page-transition-backward-leave-active
+  transition transform .4s, opacity .4s
+
+.page-transition-forward-enter-active
+.page-transition-backward-enter-active
+  transition-delay .4s
+
+.page-transition-enter-to
+.page-transition-leave
+  opacity 1
+  transform translateY(0)
+
+.page-transition-forward-enter
+  opacity 0
+  transform translateY(10px)
+.page-transition-forward-leave-to
+  opacity 0
+  transform translateY(-10px)
+
+.page-transition-backward-enter
+  opacity 0
+  transform translateY(-10px)
+.page-transition-backward-leave-to
+  opacity 0
+  transform translateY(10px)
+// Animation in the page change
+
+.playlist-script
+  font-family 'PlaylistScript', sans-serif
+  font-weight 300
+
+.color-blue
+  color $color_solid_blue
+.color-yellow
+  color $color_solid_yellow
+.color-white
+  color $color_solid_white
+.color-green
+  color $color_solid_green
+.color-deep-green
+  color $color_solid_deep_green
+
+.background-white
+  background-color $color_solid_white
+.background-blue
+  background-color $color_solid_blue
+.background-green
+  background-color $color_solid_green
+.background-yellow
+  background-color $color_solid_yellow
+.background-deep-green
+  background-color $color_solid_deep_green
+
+ul.list
+  li
+    position relative
+    display block
+    margin-bottom 5px
+    padding-left 15px
+    &::before
+      position absolute
+      content ''
+      left 0
+      top 7px
+      width 5px
+      height 5px
+      transform rotate(45deg)
+    &:last-child
+      margin-bottom 0
+  &.marker-white li::before
+    background-color $color_solid_white
+  &.marker-yellow li::before
+    background-color $color_solid_yellow
+  &.marker-blue li::before
+    background-color $color_solid_blue
+  &.marker-deep-green li::before
+    background-color $color_solid_deep_green
+  &.marker-green li::before
+    background-color $color_solid_green
+  .sublist
+    margin-left 15px
+
+.full-screen
+  width 100vw
+  height 100vh
+  min-height 700px
+
+.config-background
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+
+.config-pattern
+  &.light
+    background-image url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23FFFFFF' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")
+  &.deep
+    background-image url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23000000' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")
+
+.button
+  position relative
+  display inline-block
+  background-color transparent
+  padding 0
+  cursor pointer
+  border none
+  &.principal
+  &.action
+    @extend .overflow-hidden
+    border 1px solid
+    transition border-color .35s, background-color .35s !important
+    transition-timing-function cubic-bezier(0.2, 1, 0.3, 1)
+    border-radius 2em
+    line-height 50px
+    text-align center
+  &.principal
+    padding 0 25px
+    font-size 16px
+    min-width 100px
+    span
+    &::after
+      transition transform .35s, opacity .35s
+      transition-timing-function cubic-bezier(0.2, 1, 0.3, 1)
+    span
+      position relative
+      display block
+      vertical-align middle
+    &::after
+      content attr(data-text)
+      position absolute
+      width 100%
+      height 100%
+      top 0
+      left 0
+      opacity 0
+      transform translateY(50%)
+    &:hover
+      span
+        transform translateY(-50%)
+        opacity 0
+      &::after
+        transform translateY(0)
+        opacity 1
+  &.action
+    width 50px
+    height 50px
+    font-size 20px
+    &::before
+    &::after
+      position absolute
+      content ''
+      width 50px
+      height 50px
+      line-height 50px
+      text-align center
+      @extend .icomoon
+      transition transform .35s, color .35s
+    &.close
+      &::before
+      &::after
+        left 0
+        @extend .icon-close::before
+      &::before
+        top 0
+      &::after
+        top 50px
+      &:hover
+        &::before
+        &::after
+          transform translateY(-50px)
+    &[class*="-prev"]
+    &[class*="-next"]
+      &::before
+      &::after
+        top 0
+      &::before
+        left 0
+    &[class*="-prev"]
+      &::before
+      &::after
+        @extend .icon-arrow-left::before
+      &::after
+        right -50px
+      &:hover
+        &::before
+        &::after
+          transform translateX(-50px)
+    &[class*="-next"]
+      &::before
+      &::after
+        @extend .icon-arrow-right::before
+      &::after
+        left -50px
+      &:hover
+        &::before
+        &::after
+          transform translateX(50px)
+  &.secondary
+    line-height 25px
+    text-align center
+    &::before
+      position absolute
+      content ''
+      left 0
+      bottom 0
+      width 100%
+      height 1px
+      transform scale(0,1)
+      transform-origin left
+      transition transform .35s
+    &:hover::before
+      transform scale(1,1)
+  &.color-white
+    color $color_solid_white
+    border-color $color_solid_white
+    &::before
+      color $color_solid_white
+    &:not(.secondary):hover
+      background-color $color_solid_white
+      &::after
+        color $color_solid_yellow
+    &.secondary::before
+      background-color $color_solid_white
+  &.color-yellow
+    color $color_solid_yellow
+    border-color $color_solid_yellow
+    &::before
+      color $color_solid_yellow
+    &:not(.secondary):hover
+      background-color $color_solid_yellow
+      &::after
+        color $color_solid_white
+    &.secondary::before
+      background-color $color_solid_yellow
+  &.color-blue
+    color $color_solid_blue
+    border-color $color_solid_blue
+    &::before
+      color $color_solid_blue
+    &:not(.secondary):hover
+      background-color $color_solid_blue
+      &::after
+        color $color_solid_white
+    &.secondary::before
+      background-color $color_solid_blue
+  &.color-green
+    color $color_solid_green
+    border-color $color_solid_green
+    &::before
+      color $color_solid_green
+    &:not(.secondary):hover
+      background-color $color_solid_green
+      &::after
+        color $color_solid_white
+    &.secondary::before
+      background-color $color_solid_green
+  &.color-deep-green
+    color $color_solid_deep_green
+    border-color $color_solid_deep_green
+    &::before
+      color $color_solid_deep_green
+    &:not(.secondary):hover
+      background-color $color_solid_deep_green
+      &::after
+        color $color_solid_white
+    &.secondary::before
+      background-color $color_solid_deep_green
+
+.slick-slider
+  .slick-slide
+    outline none // fixed bug Chrome
+  .slick-arrow
+    position absolute
+    z-index 2
+    color transparent
+    @extend .button, .button.action, .button.color-white
+
+.rhomb
+  transform rotate(45deg)
+  width 400px
+  height 400px
+  div
+    transform rotate(-45deg)
+  .container
+    position relative
+    width 100%
+    height 100%
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) rotate(-45deg)
+  &.background
+  &.pattern
+    @extend .overflow-hidden
+    .container
+      width 150%
+      height 150%
+  &.background .container
+    @extend .config-background
+  &.text .container
+    flex_content(false)
+    justify-content center
+    align-items center
+    > div
+      position relative
+      margin 0 20%
+      text-align center
+
+.content-background
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  @extend .config-background
+
+i
+  position absolute
+  display block
+  &.floral-ornament
+    width 130px
+    height 100px
+    @extend .config-background
+    background-size contain
+    left 50%
+    transform translateX(calc(-50% + 8px))
+    bottom 50px
+    &.color-yellow
+      background-image url('../assets/img/floral_ornament_yellow.svg')
+    &.color-green
+      background-image url('../assets/img/floral_ornament_green.svg')
+  &.ornament
+    width 170px
+    height 30px
+    @extend .config-background
+    background-size contain
+    left 50%
+    transform translateX(-50%)
+    bottom 75px
+    &.color-yellow
+      background-image url('../assets/img/ornament_yellow.svg')
+  &.testimony-marker
+    position relative
+    display inline-block
+    width 50px
+    height 50px
+    font-size 24px
+    color $color_solid_yellow
+    text-align center
+    &::before
+      line-height 50px
+    &::after
+      position absolute
+      top 50%
+      left 50%
+      content ''
+      width 50px
+      height 50px
+      transform translate(-50%, -50%) rotate(45deg)
+      box-shadow inset 0 0 0 1px $color_solid_yellow
+  &.scroll-marker
+    left 50%
+    transform translateX(-50%)
+    width 1px
+    height 60px
+    z-index 3
+    bottom 50px
+    &::before
+    &::after
+      position absolute
+      content ''
+    &::before
+      top 0
+      left 0
+      width 1px
+      height 50px
+      transform scale(1,0)
+      transform-origin top
+      @extend .animate.scrollLoop
+    &::after
+      bottom 0
+      left 50%
+      width 20px
+      height 20px
+      transform translateX(-50%) rotate(45deg)
+    &.yellow
+      &::before
+        background-color $color_solid_yellow
+      &::after
+        box-shadow 0 0 0 1px $color_solid_yellow
+
+.mobile-menu
+  position fixed
+  bottom 35px
+  right 35px
+  z-index 4
+  display none
+  > nav
+    position fixed
+    top 0
+    left 0
+    width 100vw
+    height 100vh
+    background-color rgba(255, 255, 255, .9)
+    opacity 0
+    visibility hidden
+    transition opacity .35s, visibility .35s
+    ul
+      position relative
+      height 100%
+      flex_content(false)
+      justify-content center
+      li
+        position relative
+        opacity 0
+        transform translateY(25px)
+        transition opacity .35s, transform .35s
+        &.link a
+          position relative
+          display block
+          height 50px
+          line-height 50px
+          text-align center
+          span
+            color $color_solid_blue
+            font-size 22px
+            font-weight 300
+          &::before
+            position absolute
+            content ''
+            background-color $color_solid_yellow
+            width 0
+            height 1px
+            bottom 5px
+            @extend .horizontal-center
+            transition width .25s
+          &.router-link-exact-active::before
+            width 20px
+  .mobile-menu-button
+    position absolute
+    bottom 0
+    right 0
+    display block
+    border none
+    width 50px
+    height 50px
+    cursor pointer
+    background-color transparent
+    padding 0
+    &::before
+      position absolute
+      content ''
+      width 100%
+      height 100%
+      top 50%
+      left 50%
+      transform translate(-50%, -50%) rotate(45deg)
+      background-color $color_solid_yellow
+    i.bar
+      position absolute
+      height 1px
+      background-color $color_solid_white
+      top 50%
+      left 50%
+      width 20px
+      &.top
+        transform translate(-50%, -6px)
+      &.middle
+        transform translate(-50%, -50%)
+        transition opacity .35s
+      &.bottom
+        top auto
+        bottom 50%
+        transform translate(-50%, 6px)
+      &.top
+      &.bottom
+        transition transform .35s
+  &.active
+    > nav
+      opacity 1
+      visibility visible
+      ul > li
+        opacity 1
+        transform translateY(0)
+        &:nth-child(1)
+          transition-delay .35s
+        &:nth-child(2)
+          transition-delay .4s
+        &:nth-child(3)
+          transition-delay .45s
+        &:nth-child(4)
+          transition-delay .5s
+        &:nth-child(5)
+          transition-delay .55s
+        &:nth-child(6)
+          transition-delay .6s
+    .mobile-menu-button
+      i.bar
+        &.middle
+          opacity 0
+        &.top
+          transform translate(-50%, -50%) rotate(45deg)
+        &.bottom
+          transform translate(-50%, -50%) rotate(-45deg)
+
+nav.main-nav
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100px
+  z-index 5
+  transition transform 1s, background-color .5s
+  &.scroll
+    background-color rgba(255, 255, 255, .6)
+    &.hide
+      transform translateY(-100%)
+    &:hover
+      background-color $color_solid_white
+  .column
+    position relative
+    height 100%
+  ul
+    position relative
+    width 100%
+    height 100%
+    flex_content()
+    justify-content center
+    align-items center
+    li
+      &.link a
+        position relative
+        display block
+        width 150px
+        height 100px
+        line-height 100px
+        text-align center
+        span
+          color $color_solid_blue
+          font-size 16px
+          font-weight 300
+        &::before
+          position absolute
+          content ''
+          background-color $color_solid_yellow
+          width 0
+          height 1px
+          bottom 35px
+          @extend .horizontal-center
+          transition width .25s
+        &:hover
+        &.router-link-exact-active
+          &::before
+            width 20px
+  .logotipo
+    display block
+    color $color_solid_blue
+    margin 0 25px
+    img
+      display block
+      margin 0 auto
+      width 150px
+      height 28px
+
+header
+  &.main-header
+    position relative
+    overflow hidden
+    @extend .full-screen
+    min-height auto
+    .rhomb
+      position absolute
+      background-color $color_solid_white
+      opacity .6
+      width 100vw
+      height 100vw
+      top 0
+      left 0
+      transform translateX(-40%) rotate(45deg)
+    .shades
+      &::before
+      &::after
+        position absolute
+        content ''
+        width 100%
+        height 100%
+        top 0
+        left 0
+        z-index 2
+      &::before
+        background-image radial-gradient(circle, transparent, $color_solid_white)
+      &::after
+        background-image linear-gradient(transparent, $color_solid_white)
+    .slick-slider
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      .slick-list
+      .slick-track
+        position relative
+        width 100%
+        height 100%
+    .column
+      position relative
+      height 100%
+      flex_content(false)
+      justify-content center
+      align-items center
+    hgroup
+      position relative
+      text-align center
+      z-index 3
+      h1
+        font-size 16px
+        margin 0 0 50px 0
+        font-weight 200
+        text-transform uppercase
+        letter-spacing 5px
+      h2
+        font-size 90px
+        margin 0
+      p
+        width 50%
+        margin 0 auto
+    &.home
+      .content-background
+        &.bg-1
+          background-image url('/static/img/home/desktop_background_header_1.jpg')
+        &.bg-2
+          background-image url('/static/img/home/desktop_background_header_2.jpg')
+        &.bg-3
+          background-image url('/static/img/home/desktop_background_header_3.jpg')
+    &.social
+      .content-background
+        background-image url('/static/img/social/desktop_background_header.jpg')
+      hgroup
+        h2
+          color $color_solid_green
+        h1
+          color $color_solid_deep_green
+    &.corporate
+      .content-background
+        background-image url('/static/img/corporate/desktop_background_header.jpg')
+      hgroup
+        h2
+          color $color_solid_blue
+        h1
+          color $color_solid_blue
+    &.reserve
+      .content-background
+        background-image url('/static/img/reserve/desktop_background_header.jpg')
+      hgroup
+        h2
+          color $color_solid_blue
+        h1
+          color $color_solid_blue
+        .telephon
+          position relative
+          margin-bottom 25px
+          > span
+            font-size 16px
+            display block
+            margin-bottom 10px
+          a[href^="tel"]
+            font-size 30px
+            line-height 40px
+            font-weight 300
+    &.serices
+      .content-background
+        background-image url('/static/img/services/desktop_background_header.jpg')
+section
+  position relative
+  .column
+    position relative
+    height 100%
+  .title
+    font-size 50px
+    margin 50px 0
+    &:not(.playlist-script)
+      font-size 20px
+      font-weight 300
+      text-transform uppercase
+      letter-spacing 5px
+    sup
+    sub
+      display block
+      font-family 'ProximaNova', sans-serif !important
+      font-size 14px
+      font-weight 200
+      text-transform uppercase
+      letter-spacing 5px
+    sup
+      margin-bottom 10px
+    sub
+      margin-top 10px
+    &.color-green
+      sup
+      sub
+        color $color_solid_deep_green
+    &.color-blue
+      sup
+      sub
+        color $color_solid_yellow
+    &.color-deep-green
+      sup
+      sub
+        color $color_solid_yellow
+  p
+    font-weight 200
+    font-size 16px
+    line-height 24px
+    margin 25px 0
+  .title, p
+    &.margin-bottom
+      margin 0 0 50px 0
+  &.call-to-action
+    text-align center
+    .column
+      flex_content(false)
+      justify-content center
+      align-items center
+    p
+      width 50%
+  &.areas
+    .column
+      flex_content()
+    .wedding
+    .corporate
+      position relative
+      width 40%
+      height 100%
+      > div
+        position relative
+        height 100%
+      .rhombus
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        z-index 1
+        .rhomb
+          position absolute
+          top 50%
+      .information
+        position relative
+        z-index 2
+        height 100%
+        flex_content(false)
+        justify-content center
+        h1
+          font-size 90px
+          margin 0
+          > span
+            display block
+            font-size 14px
+            font-family 'ProximaNova', sans-serif
+            font-weight 200
+            text-transform uppercase
+            letter-spacing 5px
+        p
+          position relative
+          width 50%
+    .wedding
+      text-align right
+      margin-right 10%
+      .rhombus .rhomb
+        left 0
+        transform translate(-50%, -50%) rotate(45deg)
+        .container
+          background-image url('/static/img/home/background_rhomb_social.jpg')
+      .information
+        align-items flex-end
+    .corporate
+      text-align left
+      margin-left 10%
+      .rhombus .rhomb
+        right 0
+        transform translate(50%, -50%) rotate(45deg)
+        .container
+          background-image url('/static/img/home/background_rhomb_corporate.jpg')
+      .information
+        align-items flex-start
+  &.objective
+    .column
+      flex_content()
+      > div
+        position relative
+        width 50%
+        flex_content(false)
+        justify-content center
+        align-items flex-start
+    .rhomb
+      &.background
+        position relative
+      &.pattern
+        position absolute
+        top 50%
+        left 0
+        width 300px
+        height 300px
+        transform translate(55%, -50%) rotate(45deg)
+    &.home
+      .rhomb.background .container
+        background-image url('/static/img/home/background_rhomb_objective.jpg')
+    &.social
+      .rhomb.background .container
+        background-image url('/static/img/social/background_rhomb_objective.jpg')
+    &.corporate
+      .rhomb.background .container
+        background-image url('/static/img/corporate/background_rhomb_objective.jpg')
+  &.call-to-services
+    text-align center
+    h2.title
+      sup
+      sub
+        color $color_solid_blue
+    p
+      position relative
+      margin 0 auto 50px auto
+      width 50%
+    .column
+      flex_content(false)
+      justify-content center
+      align-items center
+    .grid
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      display grid
+      width calc(100% - 6em)
+      height calc(100% - 6em)
+      grid-gap 10px
+      grid-auto-rows calc((calc(100% - 6em) / 30) - 10px)
+      grid-auto-columns calc((calc(100% - 6em) / 30) - 10px)
+      justify-content center
+      align-content center
+      pointer-events none
+      .grid-item
+        position relative
+        @extend .overflow-hidden
+        &.background
+          @extend .config-background
+          opacity .2
+        &:nth-child(1)
+          grid-area 11 / 1 / 21 / 5
+          background-image url('/static/img/services/collage/child_1.jpg')
+        &:nth-child(2)
+          grid-area 22 / 6 / 28 / 10
+          background-image url('/static/img/services/collage/child_2.jpg')
+        &:nth-child(3)
+          grid-area 8 / 5 / 22 / 15
+          background-image url('/static/img/services/collage/child_3.jpg')
+        &:nth-child(4)
+          grid-area 22 / 10 / 29 / 15
+          background-color $color_solid_yellow
+        &:nth-child(5)
+          grid-area 1 / 11 / 8 / 15
+          background-image url('/static/img/services/collage/child_5.jpg')
+        &:nth-child(6)
+          grid-area 17 / 15 / 24 / 20
+          background-image url('/static/img/services/collage/child_6.jpg')
+        &:nth-child(7)
+          grid-area 9 / 15 / 17 / 23
+          background-image url('/static/img/services/collage/child_7.jpg')
+        &:nth-child(8)
+          grid-area 2 / 15 / 9 / 23
+          background-image url('/static/img/services/collage/child_8.jpg')
+        &:nth-child(9)
+          grid-area 17 / 20 / 22 / 26
+          background-image url('/static/img/services/collage/child_9.jpg')
+        &:nth-child(10)
+          grid-area 22 / 20 / 28 / 23
+          background-image url('/static/img/services/collage/child_10.jpg')
+        &:nth-child(11)
+          grid-area 4 / 23 / 11 / 27
+          background-color $color_solid_blue
+        &:nth-child(12)
+          grid-area 11 / 23 / 17 / 30
+          background-image url('/static/img/services/collage/child_12.jpg')
+        &:nth-child(13)
+          grid-area 17 / 26 / 22 / 28
+          background-color $color_solid_deep_green
+        &:nth-child(14)
+          grid-area 3 / 6 / 8 / 11
+          background-color $color_solid_green
+        &:nth-child(15)
+          grid-area 24 / 15 / 29 / 20
+          background-image url('/static/img/services/collage/child_15.jpg')
+  &.events
+    > .rhomb.pattern
+      position absolute
+      z-index -1
+      bottom 0
+      left 50%
+      transform translate(-50%, 50%) rotate(45deg)
+    .slick-slider
+      .slick-arrow
+        @extend .vertical-center
+        &.slick-prev
+          left 25px
+        &.slick-next
+          right 25px
+      .slick-slide
+        &.slick-current
+          figure.event
+            img
+              opacity 1 !important
+            .rhomb
+              opacity .6
+              transform translateY(0) rotate(45deg)
+            figcaption
+              opacity 1
+              transform translateY(0)
+              pointer-events auto
+        &:not(.slick-current)
+          cursor pointer
+    figure.event
+      position relative
+      background-color $color_solid_white
+      width calc(100% - 10px)
+      margin 0 5px
+      img
+        position relative
+        width 100%
+        opacity .2 !important
+        transition opacity .35s
+      .rhomb
+        position absolute
+        opacity 0
+        transform translateY(20px) rotate(45deg)
+        transition opacity .35s .2s, transform .35s .2s
+      figcaption
+        position absolute
+        left 0
+        bottom 0
+        opacity 0
+        margin 0 50px 50px 50px
+        pointer-events none
+        transform translateY(20px)
+        transition opacity .35s .3s, transform .35s .3s
+        h3
+          font-size 40px
+          font-weight 300
+          margin 0 0 50px 0
+          line-height 36px
+          span
+            position relative
+            display block
+            font-size 14px
+            padding-left 35px
+            font-weight 200
+            line-height 20px
+            margin-top 5px
+            &::before
+              position absolute
+              content ''
+              left 0
+              margin-top 10px
+              width 25px
+              height 1px
+              background-color $color_solid_yellow
+  &.memories
+    text-align center
+    .column
+      padding 100px 0 200px 0
+      > div
+        flex_content()
+        padding-top 50px
+    .memory
+      position relative
+      width 50%
+      display flex
+      .photo
+        flex 0 0 150px
+      .info
+        flex 1 1 auto
+        text-align left
+        ul
+          flex_content()
+          justify-content space-between
+        h3
+          font-size 20px
+          font-weight 200
+          margin 0
+          span
+            position relative
+            display block
+            font-size 14px
+            padding-left 35px
+            font-weight 200
+            &::before
+              position absolute
+              content ''
+              left 0
+              @extend .vertical-center
+              width 25px
+              height 1px
+            &.color-green::before
+              background-color $color_solid_green
+            &.color-yellow::before
+              background-color $color_solid_yellow
+  &.contact
+    padding 100px 0 200px 0
+    .column
+      flex_content()
+      > div
+        position relative
+        width 50%
+    address
+      position relative
+      margin-right 50px
+      width calc(100% -50px)
+      > div
+        margin-bottom 50px
+      ul.social-network
+        flex_content()
+        > li
+          margin-right 25px
+          > a span
+            &[class^='icon-']
+            &[class*=' icon-']
+              &::before
+                font-size 18px
+                margin-right 10px
+                vertical-align -2px
+  &.about
+    padding 150px 0 100px 0
+    overflow hidden
+    .column
+      flex_content(false)
+      justify-content center
+      align-items center
+    .imagotipo
+      position relative
+      margin-bottom 50px
+      img
+        position relative
+        display block
+        width 200px
+    .description
+      position relative
+      wrapper(25)
+      text-align center
+      ul.cetificates
+        position relative
+        flex_content()
+        justify-content center
+        align-items center
+        > li
+          position relative
+          margin 0 15px
+          img
+            position relative
+            display block
+            width 75px
+            height 75px
+  &.services
+    .column
+      padding-bottom 100px
+    .grid
+      position relative
+      width 100%
+      max-width 1024px
+      margin 0 auto
+      height 500px
+      display grid
+      grid-auto-rows calc(500px / 30)
+      grid-auto-columns calc(100% / 30)
+      padding-bottom 10px
+      .grid-item
+        position relative
+        overflow hidden
+        &.item-image
+          background-color $color_solid_white
+          @extend .config-background
+        &.item-title
+        &.item-information
+          flex_content(false)
+          justify-content center
+          align-items center
+        &.item-title > .title
+          margin 0
+        &.item-information > div
+          position relative
+          wrapper(20)
+      &.service-1
+        .item-image
+          grid-area 1 / 1 / 23 / 31
+          background-image url('/static/img/services/covers/desktop_background_atmosphere.jpg')
+        .item-title
+          grid-area 23 / 1 / 31 / 15
+        .item-information
+          grid-area 10 / 15 / 31 / 31
+          background-color $color_solid_blue
+          box-shadow inset 0 10px $color_solid_white,
+            inset 10px 0 $color_solid_white
+      &.service-2
+        .item-image
+          grid-area 1 / 1 / 31 / 18
+          background-image url('/static/img/services/covers/desktop_background_aliments.jpg')
+        .item-title
+          grid-area 1 / 18 / 9 / 31
+        .item-information
+          grid-area 9 / 15 / 31 / 31
+          background-color $color_solid_yellow
+          box-shadow inset 0 10px $color_solid_white,
+            inset 10px 0 $color_solid_white
+      &.service-3
+        .item-image
+          grid-area 1 / 1 / 23 / 31
+          background-image url('/static/img/services/covers/desktop_background_venues.jpg')
+        .item-title
+          grid-area 23 / 1 / 31 / 15
+        .item-information
+          grid-area 15 / 15 / 31 / 31
+          background-color $color_solid_deep_green
+          box-shadow inset 0 10px $color_solid_white,
+            inset 10px 0 $color_solid_white
+      &.service-4
+        .item-image
+          grid-area 1 / 1 / 23 / 31
+          background-image url('/static/img/services/covers/desktop_background_rents.jpg')
+        .item-title
+          grid-area 23 / 10 / 31 / 25
+        .item-information
+          grid-area 15 / 1 / 31 / 10
+          background-color $color_solid_blue
+          box-shadow inset 0 10px $color_solid_white,
+            inset -10px 0 $color_solid_white
+
+footer
+  position relative
+  padding-top 100px
+  &.social
+    background-color $color_solid_deep_green
+    .isotipo img.social
+      display block
+  &.corporate
+    background-color $color_solid_blue
+    .isotipo img.corporate
+      display block
+  .column
+    flex_content()
+    > div
+      position relative
+      width calc(100% / 3)
+      .wrapper
+        width 90%
+        margin-right 10%
+  .rhomb
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) rotate(45deg)
+  .isotipo
+    wrapper()
+    img
+      position relative
+      display none
+      margin 0 auto
+      height 100px
+  h3
+    font-weight 200
+    font-size 16px
+    margin 0
+  ul
+    position relative
+    flex_content()
+    align-items center
+    height 100px
+    line-height 50px
+    font-size 16px
+    a
+      position relative
+    &.quicklinks
+      > li
+        margin-right 25px
+        &:last-child
+          margin-right 0
+      a
+        color rgba(255, 255, 255, .5)
+        transition color .25s
+        &::before
+          position absolute
+          content ''
+          background-color $color_solid_yellow
+          width 0
+          height 2px
+          bottom 30px
+          @extend .horizontal-center
+          transition width .25s
+        &:hover
+        &.router-link-active
+          color $color_solid_white
+          &::before
+            width 20px
+    &.social-network
+      justify-content flex-end
+      > li:first-child
+        margin-right 20px
+      h3
+      a
+        color rgba(255, 255, 255, .5)
+      a
+        display block
+        width 50px
+        height 50px
+        text-align center
+        font-size 20px
+        transition color .25s
+        &:hover
+          color $color_solid_white
+  .copyright
+    position relative
+    height 50px
+    margin-top 50px
+    ul
+      height 50px
+      font-size 12px
+      justify-content space-between
+      color rgba(255, 255, 255, .3)
+      em.author
+        text-align right
+        font-style normal
+        a
+          color rgba(255, 255, 255, .3)
+          transition color .25s
+          &:hover
+            color $color_solid_white
+

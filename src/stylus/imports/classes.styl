@@ -1,0 +1,35 @@
+.column
+  width 100%
+  max-width 1280px
+  margin 0 auto
+
+.horizontal-center
+	left 50%
+	transform translateX(-50%)
+
+.vertical-center
+	top 50%
+	transform translateY(-50%)
+
+.horizontal-vertical-center
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)
+
+.clearfix
+  &::before
+  &::after
+    content ''
+    visibility hidden
+    display block
+  &::after
+    clear both
+
+.off-screen
+  user-select none
+  position absolute !important
+  width 1px
+  height 1px
+  margin 0
+  clip rect(1px,1px,1px,1px)
+  overflow hidden

@@ -1,0 +1,11 @@
+wrapper(margin = 5)
+  width 100 - (2 * margin)%
+  margin 0 (margin)%
+
+flex_content(direction = true, _wrap = true, reverse = false)
+	display flex
+	flex-wrap (_wrap) ? wrap : nowrap
+	if direction
+		flex-direction (reverse) ? row-reverse : row
+	else
+		flex-direction (reverse) ? column-reverse : column
